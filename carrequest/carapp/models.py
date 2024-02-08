@@ -4,3 +4,7 @@ from django.db import models
 class Car(models.Model):
     types=models.CharField(max_length=30)
     size=models.IntegerField()
+
+    def __str__(self):
+        return self.types
+    
