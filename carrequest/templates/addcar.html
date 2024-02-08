@@ -29,30 +29,19 @@
       </nav>
 
       <div class="container">
+        <h1 class="mt-2">Add Vechile</h1>
 
-          <h1 class="mt-2">All Vechiles</h1>
-
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Plate Number</th>
-                <th scope="col">Type</th>
-                <th scope="col">Size</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>
-                    <button type="button" class="btn btn-primary">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <form class="mt-3" action="/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="types">Car Type</label>
+              <input type="text" class="form-control" id="types" aria-describedby="emailHelp" placeholder="Enter Type Of Car" name="types">
+              <label for="size">Size</label>
+              <input type="text" class="form-control" id="size" aria-describedby="emailHelp" placeholder="Enter Car Size" name="size">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+         
 
       </div>     
 
